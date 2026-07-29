@@ -963,6 +963,78 @@ p.wide { max-width: 800px; }
 .gallery-empty p { margin: 0 auto; max-width: 480px; }
 
 /* =====================================================
+   WINNERS PAGE
+   ===================================================== */
+.winners-hero {
+  background: linear-gradient(135deg, var(--orange) 0%, #a3520d 100%);
+  padding: 80px 24px;
+  text-align: center;
+  color: var(--white);
+}
+.winners-hero h1 { color: var(--white); margin-bottom: 20px; }
+.winners-hero p  { color: rgba(255,255,255,0.85); margin: 0 auto; font-size: 1.1rem; }
+
+.winner-spotlight { padding: 72px 24px; }
+.winner-spotlight--alt { background: var(--off-white); }
+.winner-spotlight__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  align-items: center;
+}
+.winner-spotlight--reverse .winner-spotlight__inner {
+  grid-template-columns: 1.2fr 1fr;
+}
+.winner-spotlight--reverse .winner-spotlight__image { order: 2; }
+.winner-spotlight__image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+.winner-spotlight__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--orange);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.winner-spotlight__name { color: var(--dark); margin-bottom: 6px; }
+.winner-spotlight__meta {
+  font-size: 0.9rem;
+  color: var(--mid-gray);
+  margin-bottom: 24px;
+}
+.winner-spotlight__title {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--purple);
+  margin-bottom: 8px;
+}
+.winner-spotlight__medium {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+.winner-spotlight__statement {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--mid-gray);
+  max-width: 100%;
+}
+
+/* =====================================================
    FOOTER
    ===================================================== */
 .footer {
@@ -1095,6 +1167,9 @@ p.wide { max-width: 800px; }
   .judges-cards              { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
   .submit-content__inner     { grid-template-columns: 1fr; }
   .gallery-masonry           { columns: 2; }
+  .winner-spotlight__inner,
+  .winner-spotlight--reverse .winner-spotlight__inner { grid-template-columns: 1fr; gap: 32px; }
+  .winner-spotlight--reverse .winner-spotlight__image { order: 0; }
   .footer__top               { grid-template-columns: 1fr 1fr; }
   .footer__brand             { grid-column: span 2; }
 }
